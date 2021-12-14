@@ -4,18 +4,14 @@ public class App {
         Array numbers = new Array(3);
 
         // insert some integers 
-        numbers.insert(10);
-        numbers.insert(20);
-        numbers.insert(30);
+        numbers.insert(6);
+        numbers.insert(5);
+        numbers.insert(3);
 
-        // here we add a number out of the index of the array but it's ok, it's handeld
-        numbers.insert(40);
+        // here we add numbers out of the index of the array but it's ok, it's handeld
+        numbers.insert(2);
+        numbers.insert(11);
 
-        // here we delete an item from the array and get rid of holes
-        numbers.reomveAt(1);
-
-        // here we search the index of a number 
-        System.out.println(numbers.indexOf(30));
-        numbers.print();
+        //choose the methods you want to test here :
     }
 }
