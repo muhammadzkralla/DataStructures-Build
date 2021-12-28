@@ -13,5 +13,7 @@ public class App {
         numbers.insert(11);
 
         //choose the methods you want to test here :
+        numbers.sort();
+        numbers.print();
     }
 }
