@@ -50,25 +50,25 @@ public class Array {
             System.out.println(items[i]);
         }
     }
-
+    // selection sort
     public void sort(){
-        int temp;
-        int[] sortedArray = items;
-
-        for (int i = 1; i < sortedArray.length; i++){
-            for(int j = i; j > 0; j--){
-                if(sortedArray[j] < sortedArray[ j - 1 ]){
-                    temp = sortedArray[j];
-                    sortedArray[j] = sortedArray[j-1];
-                    sortedArray[j-1] = temp;
+        int out, in, min;
+        for(out = 0; out<count; out++){
+            min = out;
+            for(in  = out + 1; in <count;in++ ){
+                if(items[in] < items[out]){
+                    min = in;
+                    swap(out,min);
                 }
             }
-
         }
 
-        for(int i = 0; i < sortedArray.length; i++){
-            System.out.println(sortedArray[i]);
-        }
+    }
 
+
+    private void swap(int one,int two){
+        int temp = items[one];
+        items[one] = items[two];
+        items[two] = temp;
     }
 }
