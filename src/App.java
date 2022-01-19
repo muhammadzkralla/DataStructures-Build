@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         // declare a new Array Object and pass an initial index of 3 items
@@ -13,7 +15,7 @@ public class App {
         numbers.insert(11);
 
         //choose the methods you want to test here :
-        numbers.sort();
-        numbers.print();
+        // get the data from the user
+        
     }
 }
