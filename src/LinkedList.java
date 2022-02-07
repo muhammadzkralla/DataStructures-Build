@@ -134,4 +134,53 @@ public class LinkedList {
         return null;
     }
 
+    public int[] toArray(){
+        int[] array = new int[size];
+        int index = 0;
+        var current = first;
+        while(current != null){
+            array[index++] = current.value;
+            current = current.next;
+        }
+        return array;
+
+    }
+
+    public void reverse(){
+        if(size == 0) return;
+
+        var current = first.next;
+        var previous = first;
+        while(current != null){
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        
+        last = first;
+        last.next = null;
+        first = previous;
+
+    }
+
+    public int findKthFromTheEnd(int k){
+        if(isEmpty()){
+            throw new IllegalStateException();
+        }
+        var a = first;
+        var b = first;
+        for(int i = 0; i < k - 1; i++){
+            b = b.next;
+            if(b == null){
+                throw new IllegalArgumentException();
+            }
+        }
+        while(b != last){
+            a = a.next;
+            b = b.next;
+        }
+        return a.value;
+    }
+
 }
