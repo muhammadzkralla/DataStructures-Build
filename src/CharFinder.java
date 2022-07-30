@@ -26,7 +26,7 @@ public class CharFinder {
 
         Set<Character> set = new HashSet<>();
 
-        for(var ch : set) {
+        for(var ch : str.toCharArray()) {
             if (set.contains(ch))
                 return ch;
 
